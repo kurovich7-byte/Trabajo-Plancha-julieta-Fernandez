@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planchita 3D AR</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <style>
+        body { margin: 0; height: 100vh; background-color: #f0f0f0; }
+        model-viewer { width: 100%; height: 100%; }
+        .Boton-AR { background-color: #ffffff; border-radius: 8px; border: 1px solid #dadce0; position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); padding: 12px 24px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <model-viewer 
+        src="planchita.glb" 
+        ios-src="planchita.usdz" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate
+        alt="Modelo 3D de planchita">
+        
+        <button slot="ar-button" class="Boton-AR">
+            Ver en tu espacio (AR)
+        </button>
+    </model-viewer>
+</body>
+</html>
